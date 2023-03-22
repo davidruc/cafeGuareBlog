@@ -1,6 +1,6 @@
 export default{
     title: {
-        name: "nombre pagina",
+        name: "CAFE GUAURE",
         href: "#"},
     
     dentroNavar: [

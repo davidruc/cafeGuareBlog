@@ -10,7 +10,40 @@ export default{
                 href: "#"
             },
             image: "../img/imagen1.jpg"
-        }
+        },
+        {
+          article: "FOR SERVERS",
+          title: "Molienda de cafe post",
+          date: "Nov 12",
+          paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+          btn:{
+              name: "Continue reading",
+              href: "#"
+          },
+          image: "../img/imagen2.jpeg"
+      },
+      {
+        article: "FOR SERVERS",
+        title: "Molienda de cafe post",
+        date: "Nov 12",
+        paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+        btn:{
+            name: "Continue reading",
+            href: "#"
+        },
+        image: "../img/imagen3.jpg"
+    },
+    {
+      article: "FOR SERVERS",
+      title: "Molienda de cafe post",
+      date: "Nov 12",
+      paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+      btn:{
+          name: "Continue reading",
+          href: "#"
+      },
+      image: "../img/imagen3.webp"
+  }
     ],
     showPost(){
         this.post.forEach((val,id)=>{
