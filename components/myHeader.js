@@ -42,7 +42,7 @@ export default{
 
     ],
     tiaule(){
-        document.querySelector("#title").insertAdjacentHTML("beforeend", `<a class="blog-header-logo text-dark" href="#">${this.title.name}</a>`)
+        document.querySelector("#title").insertAdjacentHTML("beforeend", `<a class="blog-header-logo text-white" href="#">${this.title.name}</a>`)
     },
     listarNavar(){
         let plantilla = "";

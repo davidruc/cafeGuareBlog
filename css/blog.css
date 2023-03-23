@@ -117,8 +117,22 @@ h1, h2, h3, h4, h5, h6 {
 .imgStyle{
   background-size: cover;
   background-position: center;
+  z-index: 0;
+ 
+  
+}
+.transbox{
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: 10;
+}
+#banner{
+  padding: 6.5%;
 }
 
+#post #cards{
+  border: 3px solid rgb(139, 126, 107) !important;
+  border-radius: .8rem !important; 
+}
 .imgresponsive{
   width: 250px; 
   height: 250px;
