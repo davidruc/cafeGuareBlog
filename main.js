@@ -5,6 +5,7 @@ import myArticles from "./components/myArticles.js";
 
 myHeader.tiaule();
 myHeader.listarNavar();
+myHeader.llamarSingUp();
 
 myBanner.showImage();
 myBanner.showSectionBanner();

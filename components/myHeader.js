@@ -2,7 +2,10 @@ export default{
     title: {
         name: "CAFE GUAURE",
         href: "#"},
-    
+    singIn:{
+        name: "Sign up",
+        href: "#",
+    },
     dentroNavar: [
         {
             name: "Contactenos",
@@ -47,6 +50,11 @@ export default{
             plantilla += `<a class="p-2 link-secondary" href="${val.href}">${val.name}</a>`
         });
         document.querySelector(`#dentroNavar`).insertAdjacentHTML('beforeend', plantilla);
-    } 
+    },
+    llamarSingUp(){
+        document.querySelector("#singIn").insertAdjacentHTML("beforeend", `<a class="btn btn-sm btn-outline-secondary" href="${this.singIn.href}">${this.singIn.name}</a>`)
+    }
 
 }
+
+/*  */

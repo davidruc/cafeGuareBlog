@@ -7,9 +7,35 @@ export default{
             name: "David",
             href: "#"
         },
+    
     },
     paragraph1: "This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.",
+    paragraph2: `This is some additional paragraph placeholder content. It has been written to fill the available space and
+    show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
+    demonstration flowing, so be on the lookout for this exact same string of text.</p>`,
+    subtitulo2: `Blockquotes`,
+    blockquote: `This is an example blockquote in action:`,
+    blockquoteExample:`Quoted text goes here.`,
+    paragraph3: `This is some additional paragraph placeholder content. It has been written to fill the available space and
+    show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
+    demonstration flowing, so be on the lookout for this exact same string of text.`,
+    subtitulo3:`Example lists`,
+    paragraph4: `This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
+    repetitive body text used throughout. This is an example unordered list:`,
+    lista: {
+      item1: "First list item",
+      item2: "Second list item with a longer description",
+      item3: "Third list item to close it out",
+      item4: "First list item",
+      item5: "Second list item with a longer description",
+      item6: "Third list item to close it out",
+    },
+    descripcion:"And this is an ordered list:",
+    descripcion2: "And this is a definiton list:",
+    
 
+
+    
     listarArticulo(){
         document.querySelector("#article").insertAdjacentHTML("beforeend", `<h3 class="pb-4 mb-4 fst-italic border-bottom">
         ${this.titulo}
@@ -21,32 +47,27 @@ export default{
 
         <p>${this.paragraph1}</p>
         <hr>
-        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-          show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-          demonstration flowing, so be on the lookout for this exact same string of text.</p>
-        <h2>Blockquotes</h2>
-        <p>This is an example blockquote in action:</p>
+        <p>${this.paragraph2}</p>
+        <h2>${this.subtitulo2}</h2>
+        <p>${this.blockquote}</p>
         <blockquote class="blockquote">
-          <p>Quoted text goes here.</p>
+          <p>${this.blockquoteExample}</p>
         </blockquote>
-        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-          show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-          demonstration flowing, so be on the lookout for this exact same string of text.</p>
-        <h3>Example lists</h3>
-        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-          repetitive body text used throughout. This is an example unordered list:</p>
+        <p>${this.paragraph3}</p>
+        <h3>${this.subtitulo3}</h3>
+        <p>${this.paragraph4}</p>
         <ul>
-          <li>First list item</li>
-          <li>Second list item with a longer description</li>
-          <li>Third list item to close it out</li>
+          <li>${this.lista.item1}</li>
+          <li>${this.lista.item2}</li>
+          <li>${this.lista.item3}</li>
         </ul>
-        <p>And this is an ordered list:</p>
+        <p>${this.descripcion}</p>
         <ol>
-          <li>First list item</li>
-          <li>Second list item with a longer description</li>
-          <li>Third list item to close it out</li>
+          <li>${this.lista.item4}</li>
+          <li>${this.lista.item5}</li>
+          <li>${this.lista.item6}</li>
         </ol>
-        <p>And this is a definiton list:</p>
+        <p></p>
         <dl>
           <dt>HyperText Markup Language (HTML)</dt>
           <dd>The language used to describe and define the content of a Web page</dd>
