@@ -2,64 +2,69 @@ export default{
    
     nav:[
         {
-            title: "ewwqewqewqewq",
-            paragraph:"ewgggg"
+            title: "Sobre Nosotros:",
+            paragraph:"Café Guarue surge de un sueño, de una tierra prodigia y de una pareja amante del café.",
+            imagen: "../img/",
         },
         {
-            title:"TITULO2",
+            title:"Últimos blogs",
             links:[
             {
-                name: "Abril 18",
+                name: "¿Cómo se cosecha el café virgen?  ",
+                date: "Abril 18",
                 href: "",
             },
             {
-                name: "",
+                name: "5 Mitos sobre el la tostión del café",
+                date: "Marzo 22",
                 href: "",
             },
             {
-                name: "",
+                name: "Prensa francesa o dsaodkasod",
+                date: "Marzo 15",
                 href: "",
             },
             {
-                name: "",
+                name: "Truco de la abuela: sal al perico",
+                date: "Marzo 12",
                 href: "",
             },
             {
-                name: "",
+                name: "7 Razones por las que deberías tomar a diario",
+                date: "Febrero 29",
                 href: "",
             },
             {
-                name: "",
+                name: "Breve historia del café castilla",
+                date: "Febrero 15",
                 href: "",
             },
             {
-                name: "",
+                name: "Aprende a ser un catador de café profesional",
+                date: "Febrero 5",
                 href: "",
             },
-            {
-                name: "",
-                href: "",
-            },
-            {
-                name: "",
-                href: "",
-            }
+           
         ]
 
         },
         {
-            title: "Titulo3",
+            title: "Nuestras Redes",
             links:[
                 {
                     name: "instagram",
+
+                    date: "",
                     href: "",
                 },
                 {
-                    name: "",
+                    name: "WhatsApp",
+                    date: "",
                     href: "",
                 },
                 {
-                    name: "",
+                    name: "Facebook",
+                    date: "",
                     href: "",
                 }
             ]
@@ -84,8 +89,8 @@ export default{
         return `
         <div class="p-4">
             <h4 class="fst-italic">${p1.title}</h4>
-            <ol class="list-unstyled mb-0">
-                ${p1.links.map((val, id) =>`<li><a href="${val.href}">${val.name}</a></li>`).join('')}      
+            <ol class="list-unstyled d-flex flex-column gap-2 mb-0">
+                ${p1.links.map((val, id) =>`<li><a class="continue" href="${val.href}">${val.name}  <em class="fechas">${val.date}</em> </a></li>`).join('')}      
             </ol>
         </div>
         `;

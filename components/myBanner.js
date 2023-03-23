@@ -15,7 +15,7 @@ export default{
         <h1 class="display-4 fst-italic">${this.titulo}</h1>
         
         <p class="lead my-3">${this.paragraph}</p>
-        <p class="lead mb-0"><a href="${this.btn.href}" target="_blank" class="text-white fw-bold">${this.btn.name}</a></p>
+        <p class="lead mb-0"><a href="${this.btn.href}" target="_blank" class="continue fw-bold">${this.btn.name}</a></p>
     
          `)
     }

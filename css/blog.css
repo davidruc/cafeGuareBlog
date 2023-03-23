@@ -138,3 +138,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 250px;
   object-fit: cover;
 }
+
+
+
+.continue{
+  color: rgb(84, 158, 84);
+}
+.continue:hover{
+  color:rgb(255, 255, 255)
+}
+
+.articles{
+  color: rgb(0, 80, 0);
+}
+.continue .fechas{
+  color: aquamarine;
+}
+.continue:hover > .fechas{
+  color: rgb(255, 255, 255);
+}
