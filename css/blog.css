@@ -164,4 +164,19 @@ h1, h2, h3, h4, h5, h6 {
 .continue:hover > .fechas{
   color: rgb(255, 255, 255);
 }
+.table{
+  border: 1px solid whitesmoke;
+}
+
+#cabeza{
+  background-color: #969696;
+}
+
+.bodyTable{
+  background-color: #4e4c51;
+}
+.guaureimg{
+  border-radius: 40px;
+  
+}
 

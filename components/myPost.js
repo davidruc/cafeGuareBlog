@@ -25,7 +25,7 @@ export default {
     },
     {
       article: "CONSEJOS",
-      title: "Tips para catar cafe",
+      title: "Tips para catar café",
       date: "Nov 12",
       paragraph: `Limpiar paladar, oler y probar, identificar sabor, cuerpo, acidez y aroma.`,
       btn: {

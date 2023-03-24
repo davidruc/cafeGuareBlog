@@ -1,6 +1,6 @@
 export default{
     title: {
-        name: "CAFE GUAURE",
+        name: "CAFÉ GUAURE",
         href: "#"},
     singIn:{
         name: "Sign up",
