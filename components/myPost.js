@@ -14,9 +14,9 @@ export default {
     },
     {
       article: "PARA FANÁTICOS",
-      title: "Tipos de Tueste: Tueste medio",
+      title: "Tipos de Tueste (Medio)",
       date: "Ene 2",
-      paragraph: `Tueste moderado, más cuerpo, equilibrio entre acidez y amargor en el sabor.`,
+      paragraph: `Tueste moderado, más cuerpo, equilibrio entre acidez y amargor en el sabor`,
       btn: {
         name: "Continua leyendo...",
         href: "https://www.cafescandelas.com/es/blog/tipos-tueste-caf%C3%A9"
@@ -52,12 +52,12 @@ export default {
 
       document.querySelector("#post").insertAdjacentHTML("beforeend", `
             <div class="col-lg-6">
-            <div class="row g-0 border rounded overflow-hidden flex-col flex-md-row  mb-4 shadow-sm h-400 bg-secondary  position-relative " id="cards">
-              <div class="col p-4 d-flex flex-column position-static">
+            <div class="row g-0 border rounded overflow-hidden flex-col flex-md-row  mb-4 shadow-sm bg-secondary  position-relative " id="cards">
+              <div class="col p-4 d-flex  flex-column position-static">
                 <strong class="d-inline-block mb-2 articles">${val.article}</strong>
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 ">${val.date}</div>
-                <p class="card-text mb-auto">${val.paragraph}</p>
+                <p class="card-text mb-auto">${val.paragraph}...</p>
                 <a href="#" class="stretched-link continue">${val.btn.name}</a>
               </div>
               <div class="col-12 col-md-auto justify-content-center d-flex align-items-center ">

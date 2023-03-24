@@ -105,8 +105,8 @@ export default{
         
         <p>${this.articulo1.paragraph2}</p>
         <hr>
-        <div class="col-12 d-flex align-items-center justify-content-center ">
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-wrap align-items-center justify-content-center ">
+        <div class="d-flex flex-column col-12 col-lg-6">
         <h2>${this.articulo2.subtitulo2}</h2>
         <p>${this.articulo2.blockquote}</p>
         <blockquote class="blockquote">
@@ -115,7 +115,7 @@ export default{
         <p class="">${this.articulo2.paragraph3}</p>
         </div>
         
-        <img class= " w-50 h-50 px-3 pt-3 guaureimg col-12 col-md-6" src="${this.articulo2.imagen}">
+        <img class= " col-12 col-lg-6 px-3 pt-3 guaureimg " src="${this.articulo2.imagen}">
         </div>
        
         <hr>
