@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 .transbox{
-  background-color: rgba(0, 0, 0, 0.61);
+  background-color: rgba(0, 0, 0, 0.808);
   z-index: 10;
 }
 #banner{
@@ -139,8 +139,15 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-
-
+#about{
+  height: 88vh;
+}
+.aboutUsImg{
+  width: 100%;
+  object-fit: cover;
+  
+  
+}
 .continue{
   color: rgb(84, 158, 84);
 }
@@ -157,3 +164,4 @@ h1, h2, h3, h4, h5, h6 {
 .continue:hover > .fechas{
   color: rgb(255, 255, 255);
 }
+

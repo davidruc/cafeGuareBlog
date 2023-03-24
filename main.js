@@ -10,6 +10,7 @@ myHeader.llamarSingUp();
 
 myBanner.showImage();
 myBanner.showSectionBanner();
+myBanner.showLogo();
 
 myPost.showPost();
 
