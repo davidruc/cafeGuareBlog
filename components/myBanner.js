@@ -7,7 +7,7 @@ export default{
     },
 
     image: "./img/cafe.jpg",
-    imagen2: "/img/logo.png",
+    imagen2: "./img/logo.png",
     showImage(){
         document.querySelector(".imgStyle").style.backgroundImage = `url(${this.image})`;
     },

@@ -20,7 +20,7 @@ export default{
       paragraph3: `Guaure es una pequeña vereda ubicada en las montañas, rodeada de una naturaleza exuberante y una tierra muy fértil. La comunidad es conocida por su gente cálida y hospitalaria, siempre dispuesta a compartir su cultura y tradiciones con los visitantes.<br><br>
   
       En Guaure, la mayoría de la gente se dedica al cultivo de café, con técnicas sostenibles y respetuosas con el medio ambiente. La cosecha de café es una actividad muy importante en la comunidad y une a las familias y amigos en un esfuerzo común para producir un café de alta calidad.`,
-      imagen: "img/paisajeGuaure.jpeg"
+      imagen: "./img/paisajeGuaure.jpeg"
     },
     articulo3:{
       subtitulo3:`Variedades de café`,

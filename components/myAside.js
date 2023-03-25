@@ -4,7 +4,7 @@ export default{
         {
             title: "Sobre Nosotros:",
             paragraph:"Café Guarue surge de un sueño, de una tierra prodigia y de una pareja amante del café.",
-            imagen: "img/aboutUs.jpeg",
+            imagen: "./img/aboutUs.jpeg",
         },
         {
             title:"Últimos blogs",
