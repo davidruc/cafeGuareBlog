@@ -10,7 +10,7 @@ export default {
         name: "Continua leyendo...",
         href: "https://www.cenicafe.org/es/publications/avt0337.pdf"
       },
-      image: "../img/cafe1.jpeg"
+      image: "img/cafe1.jpeg"
     },
     {
       article: "PARA FANÁTICOS",
@@ -21,7 +21,7 @@ export default {
         name: "Continua leyendo...",
         href: "https://www.cafescandelas.com/es/blog/tipos-tueste-caf%C3%A9"
       },
-      image: "../img/molienda.jpeg"
+      image: "img/molienda.jpeg"
     },
     {
       article: "CONSEJOS",
@@ -32,7 +32,7 @@ export default {
         name: "Continua leyendo...",
         href: "https://cursosbaristacafe.com.mx/blog/barismo/como-catar-el-cafe/"
       },
-      image: "../img/imagen2.jpeg"
+      image: "img/imagen2.jpeg"
 
     },
     {
@@ -44,7 +44,7 @@ export default {
           name: "Continua leyendo...",
           href: "https://perfectdailygrind.com/es/2016/12/19/prensa-francesa-y-guia-de-extraccion/"
       },
-      image: "../img/imagen1.jpg"
+      image: "img/imagen1.jpg"
     },
   ],
   showPost() {
