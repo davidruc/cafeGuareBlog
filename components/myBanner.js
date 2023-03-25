@@ -6,8 +6,8 @@ export default{
         href: "https://juanvaldez.com/"
     },
 
-    image: "img/cafe.jpg",
-    imagen2: "img/logo.png",
+    image: "./img/cafe.jpg",
+    imagen2: "/img/logo.png",
     showImage(){
         document.querySelector(".imgStyle").style.backgroundImage = `url(${this.image})`;
     },
