@@ -41,19 +41,26 @@ export default{
         }
 
     ],
-    tiaule(){
-        document.querySelector("#title").insertAdjacentHTML("beforeend", `<a class="blog-header-logo text-white" href="#">${this.title.name}</a>`)
-    },
-    listarNavar(){
-        let plantilla = "";
-        this.dentroNavar.forEach((val,id) => {
-            plantilla += `<a class="p-2 link-secondary" href="${val.href}">${val.name}</a>`
-        });
-        document.querySelector(`#dentroNavar`).insertAdjacentHTML('beforeend', plantilla);
-    },
-    llamarSingUp(){
-        document.querySelector("#singIn").insertAdjacentHTML("beforeend", `<a class="btn btn-sm btn-outline-secondary" href="${this.singIn.href}">${this.singIn.name}</a>`)
-    }
+show(){
+    const ws = new Worker("storage/wsMyHeader.js", {type: "module"});
+    let id = [];
+    let count = 0;
+    id.push("#title");
+    ws.postMessage({module: "tiaule", data: this.title});
+    id.push("#singIn");
+    ws.postMessage({module: "llamarSingUp", data: this.singIn});
+    id.push("#dentroNavar")
+    ws.postMessage({module: "listarNavar", data: this.dentroNavar});
+    
+
+    ws.addEventListener("message", (e)=>{
+        let doc = new DOMParser().parseFromString(e.data, "text/html");
+        document.querySelector(id[count]).append(...doc.body.children);
+        (id.length-1==count) ? ws.terminate(): count++;
+    })
+    
+
+}
 
 }
 

@@ -5,13 +5,9 @@ import myArticles from "./components/myArticles.js";
 import myAside from "./components/myAside.js";
 import myFooter from "./components/myFooter.js";
 
-myHeader.tiaule();
-myHeader.listarNavar();
-myHeader.llamarSingUp();
+myHeader.show();
 
-myBanner.showImage();
-myBanner.showSectionBanner();
-myBanner.showLogo();
+myBanner.show2();
 
 myPost.showPost();
 
