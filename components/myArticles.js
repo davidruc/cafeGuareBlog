@@ -36,8 +36,6 @@ export default{
           item6: "Robusta: el más común, alto contenido de cafeína y sabor fuerte y amargo.",
           item7: "Excelsa: sabor afrutado y ácido, menos común que el Robusta.",
           item8: "Ugandés: sabor intenso y a nuez, cultivado principalmente en África.",
-      
-    
         },
         descripcion:"Coffea Robusta:",
         descripcion2: "Cada tipo de café tiene características únicas que se deben a factores como el lugar de origen, el clima, el suelo y el método de procesamiento. Esto hace que la experiencia de probar diferentes tipos de café sea fascinante y enriquecedora.",
@@ -51,7 +49,6 @@ export default{
         },
         paragraph1: "El tostado del café es el proceso de calentar los granos de café crudos para obtener el aroma y sabor deseados. El proceso de tostado implica la aplicación de calor a los granos de café crudos en un rango de temperatura de 180 °C a 240 °C. Durante el proceso de tostado, el color, aroma y sabor de los granos de café cambian y se desarrollan distintas características que son únicas para cada tipo de tostado.",
         paragraph2: "Hay varios tipos de tostado del café, cada uno con sus propias características y sabores distintivos. A continuación, te presento una tabla de 4x4 con algunos de los tipos de tostado más comunes y sus principales características:",
-  
         table:[{
           cabezas:[
             {name:"Tipo de tostado"},
@@ -71,8 +68,6 @@ export default{
             {name:"Sabor equilibrado"},
             {name: "Los granos han sido tostados durante un tiempo medio, lo que les da un sabor más equilibrado y menos ácido que el tostado claro."},
           ],
-
-        
           medioOscuro:[
             {name:"Tostado medio oscuro"},
             {name:"Marrón oscuro"},
@@ -97,7 +92,6 @@ export default{
       ws4.postMessage({module: "listarArticulo", data: this.datos});
       id4.push(".table");
       ws4.postMessage({module: "listartablita", data: this.datos.articulo4});
-      console.log(id4);
       ws4.addEventListener("message", (e)=>{
           let doc4 = new DOMParser().parseFromString(e.data, "text/html");
           document.querySelector(id4[count4]).append(...doc4.body.children);
@@ -105,6 +99,3 @@ export default{
       })
   }
 }
-/*  
-    
- */

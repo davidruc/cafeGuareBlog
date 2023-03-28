@@ -3,13 +3,10 @@ let wsMyArticles = {
         return `<h3 class="pb-4 mb-4 fst-italic articles border-bottom">
         ${p1.titulo}
       </h3>
-
       <article class="blog-post">
         <h2 class="blog-post-title ">${p1.articulo1.subtitulo}</h2>
         <p class="blog-post-meta">${p1.articulo1.fecha.date} <a href="#" class="continue">${p1.articulo1.fecha.creador.name}</a></p>
-      
         <p>${p1.articulo1.paragraph1}</p>
-        
         <p>${p1.articulo1.paragraph2}</p>
         <hr>
         <div class="d-flex flex-wrap align-items-center justify-content-center ">
@@ -24,7 +21,6 @@ let wsMyArticles = {
         
         <img class= " col-12 col-lg-6 px-3 pt-3 guaureimg " src="${p1.articulo2.imagen}">
         </div>
-       
         <hr>
         <h3>${p1.articulo3.subtitulo3}</h3>
         <p>${p1.articulo3.paragraph4}</p>
@@ -50,13 +46,12 @@ let wsMyArticles = {
           <p>${p1.articulo4.paragraph1}</p>
           
           <p>${p1.articulo4.paragraph2}</p>
-         
+
+
           <table class="table text-white">
-          
           </table>
 
-          <p>p1 is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-            repetitive body text used throughout.</p>
+          
         </article>
         `
 
@@ -65,7 +60,22 @@ let wsMyArticles = {
 
 
     listartablita(p1){
-    let plantilla0 = "", plantilla1 = "", plantilla2 = "", plantilla = ""
+      return `
+      <thead>
+      <tr>
+        ${p1.table.map((val,id)=>{return `${val.cabezas.map((val2, id2)=>{return `<th>${val2.name}</th>`}).join("")}`})};
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      ${p1.table.map((val,id)=>{return `${val.claro.map((val2, id2)=>{return `<th>${val2.name}</th>`}).join("")}`})};
+      ${p1.table.map((val,id)=>{return `${val.medio.map((val2, id2)=>{return `<th>${val2.name}</th>`}).join("")}`})};
+      ${p1.table.map((val,id)=>{return `${val.medioOscuro.map((val2, id2)=>{return `<th>${val2.name}</th>`}).join("")}`})};
+      ${p1.table.map((val,id)=>{return `${val.oscuro.map((val2, id2)=>{return `<th>${val2.name}</th>`}).join("")}`})}
+      </tr>
+      </tbody>`
+
+    /* let plantilla0 = "", plantilla1 = "", plantilla2 = "", plantilla = ""
     let tabla = p1.table.map((val, id)=>{
         return `  <thead>
               <tr id="cabeza">
@@ -74,7 +84,7 @@ let wsMyArticles = {
             </thead>
             <tbody class="bodyTable">
               <tr id="claro">
-               ${val.claro.forEach((val,id) => {return plantilla += `<td>${val.name}</td>`})}
+              ${val.claro.forEach((val,id) => {return plantilla += `<td>${val.name}</td>`})}
               </tr>
               <tr id="medio">  
               ${val.medio.forEach((val,id) => {return plantilla += `<td>${val.name}</td>`})}
@@ -85,11 +95,9 @@ let wsMyArticles = {
               <tr id="oscuro">
               ${val.oscuro.forEach((val,id) => {return plantilla += `<td>${val.name}</td>`})}
               </tr>
-              </tbody>`
+              </tbody>` */
 
-    }) 
-    return tabla
-
+    } 
       
 
       /* let plantilla = "";
@@ -121,9 +129,9 @@ let wsMyArticles = {
       });
       document.querySelector(`#oscuro`).insertAdjacentHTML('beforeend', plantilla3); */
 
-  }, 
+  } 
 
-}
+
 
 self.addEventListener("message", (e)=>{
     postMessage(wsMyArticles[`${e.data.module}`](e.data.data));
