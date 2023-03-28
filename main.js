@@ -10,10 +10,10 @@ myHeader.show();
 myBanner.showImage();
 myBanner.show2();
 
-myPost.showPost();
+myPost.show3();
 
-myArticles.listarArticulo();
-myArticles.listartablita();
+myArticles.show4();
+/* myArticles.listartablita(); */
 
 myAside.showAside();
 
