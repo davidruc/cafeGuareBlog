@@ -7,29 +7,29 @@ export default{
             href: "https://juanvaldez.com/"
         }
     },
+    imagenes:{
+        image: "./img/cafe.jpg",
+        imagen2: "./img/logo.png",
 
-    image: "./img/cafe.jpg",
-    imagen2: "./img/logo.png",
+    },
     
-
+    showImage(){
+        document.querySelector(".imgStyle").style.backgroundImage = `url(${this.imagenes.image})`;
+    },
     show2(){
         const ws2 = new Worker("storage/wsMyBanner.js", {type:"module"});
         let id2 = [];
         let count2 = 0;
-
-        ws2.postMessage({module: "showImage", data: this.image});
+        /* id2.push(".imgStyle")
+        ws2.postMessage({module: "showImage", data: this.imagenes}); */
         id2.push("#banner");
         ws2.postMessage({module: "showSectionBanner", data: this.contenido});
         id2.push("#logo");
-        ws2.postMessage({module: "showLogo", data: this.imagen2});
+        ws2.postMessage({module: "showLogo", data: this.imagenes});
+        console.log(id2);
         ws2.addEventListener("message", (e)=>{
             let doc2 = new DOMParser().parseFromString(e.data, "text/html");
-            document.querySelectorAll("#logo").append(...doc2.body.children);
-            ws2.terminate();
-        });
-        ws2.addEventListener("message", (e)=>{
-            let doc3 = new DOMParser().parseFromString(e.data, "text/html");
-            document.querySelector("#banner").append(...doc3.body.children);
+            document.querySelector(id2[count2]).append(...doc2.body.children);
             (id2.length-1==count2) ? ws2.terminate() : count2++;
         })
     }
