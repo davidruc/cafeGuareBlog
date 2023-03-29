@@ -1,19 +1,8 @@
+import config from "../storage/config.js";
 export default{
-    contenido: {
-        titulo: "El mejor café origánico",
-        paragraph:  `El café Guaure está cultivado de manera sostenible, sin químicos tóxicos, haciendolo una opción saludable para ti y para el planeta. Además, su sabor auténtico y su alta calidad te garantizarán una experiencia única para el paladar.   <strong>  <em>  Atrévete a probarlo.`,
-        btn: {
-            name : "saber más...",
-            href: "https://juanvaldez.com/"
-        }
-    },
-    imagenes:{
-        image: "./img/cafe.jpg",
-        imagen2: "./img/logo.png",
-
-    },
-    
     showImage(){
+        config.dataMyBanner();
+        Object.assign(this, JSON.parse(localStorage.getItem("myBanner")))
         document.querySelector(".imgStyle").style.backgroundImage = `url(${this.imagenes.image})`;
     },
     show2(){
@@ -26,7 +15,6 @@ export default{
         ws2.postMessage({module: "showSectionBanner", data: this.contenido});
         id2.push("#logo");
         ws2.postMessage({module: "showLogo", data: this.imagenes});
-        console.log(id2);
         ws2.addEventListener("message", (e)=>{
             let doc2 = new DOMParser().parseFromString(e.data, "text/html");
             document.querySelector(id2[count2]).append(...doc2.body.children);

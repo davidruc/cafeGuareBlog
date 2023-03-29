@@ -17,6 +17,8 @@ let wsMyPost = {
                 </div>
               </div>`
         })
+
+        
         return plantilla.join('');
       }
 }

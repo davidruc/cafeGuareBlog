@@ -1,47 +1,9 @@
+import config from "../storage/config.js";
 export default{
-    title: {
-        name: "CAFÉ GUAURE",
-        href: "#"},
-    singIn:{
-        name: "Sign up",
-        href: "#",
-    },
-    dentroNavar: [
-        {
-            name: "Contactenos",
-            href: "#"
-        },
-        {
-            name: "Tostion",
-            href: "#"
-        },
-        {
-            name: "Tipos de café",
-            href: "#"
-        },
-        {
-            name: "Historia",
-            href: "#"
-        },
-        {
-            name: "Café en grano",
-            href: "#"
-        },
-        {
-            name: "Café molido",
-            href: "#"
-        },
-        {
-            name: "Guare",
-            href: "#"
-        },
-        {
-            name: "Opinion",
-            href: "#"
-        }
-
-    ],
+    
 show(){
+    config.dataMyHeader();
+    Object.assign(this, JSON.parse(localStorage.getItem("myHeader")))
     const ws = new Worker("storage/wsMyHeader.js", {type: "module"});
     let id = [];
     let count = 0;
